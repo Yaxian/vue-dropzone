@@ -490,7 +490,6 @@ export function useDropzone(options: Partial<FileUploadOptions> = {}) {
   const getRootProps = ({
     onFocus,
     onBlur,
-    onClick,
     onDragEnter,
     onDragenter,
     onDragOver,
@@ -504,7 +503,6 @@ export function useDropzone(options: Partial<FileUploadOptions> = {}) {
   } = {}) => ({
     onFocus: composeKeyboardHandler(composeEventHandlers(onFocus, onFocusCb)),
     onBlur: composeKeyboardHandler(composeEventHandlers(onBlur, onBlurCb)),
-    onClick: composeHandler(composeEventHandlers(onClick, onClickCb)),
     onDragenter: composeDragHandler(composeEventHandlers(onDragEnter, onDragenter, onDragEnterCb)),
     onDragover: composeDragHandler(composeEventHandlers(onDragOver, onDragover, onDragOverCb)),
     onDragleave: composeDragHandler(composeEventHandlers(onDragLeave, onDragleave, onDragLeaveCb)),
